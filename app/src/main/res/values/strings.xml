@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">randomizer</string>
+    <string name="result">Результат:</string>
+    <string name="_0">0</string>
+    <string name="back">Назад</string>
+    <string name="open">Открыть</string>
+    <string name="generate">Генерировать</string>
+</resources>
