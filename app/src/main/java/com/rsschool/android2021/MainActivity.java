@@ -1,21 +1,22 @@
 package com.rsschool.android2021;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class MainActivity extends AppCompatActivity implements Communicator {
 
+
+public class MainActivity extends AppCompatActivity implements Communicator {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         openFirstFragment(0);
-
-
     }
 
     private void openFirstFragment(int previousResult) {

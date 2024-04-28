@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 
 class FirstFragment : Fragment() {
 
@@ -18,8 +16,6 @@ class FirstFragment : Fragment() {
     private var previousResult: TextView? = null
     private lateinit var min: EditText
     private lateinit var max: EditText
-
-    private var fragmentCommunicator: Communicator? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,7 +38,11 @@ class FirstFragment : Fragment() {
         max = view.findViewById(R.id.max_value)
         generateButton?.setOnClickListener {
             if (min.text.toString().length < 1) {
-                println("  ееееееееееееееее")
+                println("не заполнил min")
+                return@setOnClickListener
+            }
+            if (max.text.toString().length < 1) {
+                println("не заполнил max")
                 return@setOnClickListener
             }
             parentFragmentManager.beginTransaction()
